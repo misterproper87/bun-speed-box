@@ -1,0 +1,28 @@
+{
+  "name": "bun-speed-box",
+  "version": "1.0.0",
+  "description": "A fast URL shortener built with Bun, ElysiaJS, and Drizzle ORM",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot src/index.ts",
+    "start": "bun src/index.ts",
+    "test": "bun test",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "check": "biome check --write .",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "bun scripts/migrate.ts",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "elysia": "^1.2.25",
+    "drizzle-orm": "^0.41.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.30.4"
+  },
+  "trustedDependencies": ["@biomejs/biome"]
+}
